@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import FunHeader from "./components/FunHeader";
+import ClassHeader from "./components/ClassHeader";
+import Button from "./components/Button";
+import ClassEventHandling from "./components/ClassEventHandling";
+import ClassChangeEvent from "./components/ClassChangeEvent";
+import Routing from "./components/Routing";
+import LifeCycleA from "./components/LifeCycleA";
+import Product from "./components/Product";
+import PostList from "./components/PostList";
+import HookCounter from "./components/HookCounter";
+import UseEffectHookCounter from "./components/UseEffectHookCounter";
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  constructor(){
+    super();
+
+    this.style = {
+      textAlign: "center"
+    }
+  }
+
+  render() {
+   return (
+     <div className="App" style={this.style}>
+{/*    
+    <FunHeader name="Dhairya">
+    <p>He is a React Developer</p>
+    </FunHeader>
+     
+   
+    <ClassHeader name = "Apoorv" />
+
+   <Button />
+
+   <ClassEventHandling />
+
+   <ClassChangeEvent roll="22" /> 
+  <Routing></Routing> 
+  <LifeCycleA /> 
+  <PostList />
+  */}
+
+  <HookCounter />
+
+  <UseEffectHookCounter />
+
+   
+  </div>  
+   )
+  }
 }
 
 export default App;
